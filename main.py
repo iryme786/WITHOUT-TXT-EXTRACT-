@@ -41,12 +41,8 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 
 # Bot credentials from environment variables (Render compatible)
-API_ID = int(os.environ.get("API_ID", 24473318))
-API_HASH = os.environ.get("API_HASH", "e7dd0576c5ac0ff8f90971d6bb04c8f5")
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "8034069514:AAHUBpzSCq41jPwsJkDbXuEoVC_yCxzyuw0")
-
 # Initialize Bot Globally (IMPORTANT FIX)
-bot = Client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
+bot = Client("bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
 # Flask app for Render
 app = Flask(__name__)
@@ -1486,8 +1482,8 @@ async def process_appxwp(bot: Client, m: Message, user_id: int):
                 api = api = "https://" + api.replace("https://", "").replace("http://", "").rstrip("/")
                 selected_app_name = api
 
-            token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEwMTU1NTYyIiwiZW1haWwiOiJhbm9ueW1vdXNAZ21haWwuY29tIiwidGltZXN0YW1wIjoxNzQ1MDc5MzgyLCJ0ZW5hbnRUeXBlIjoidXNlciIsInRlbmFudE5hbWUiOiIiLCJ0ZW5hbnRJZCI6IiIsImRpc3Bvc2FibGUiOmZhbHNlfQ.EfwLhNtbzUVs1qRkMqc3P6ObkKSO0VYWKdAe6GmhdAg"
-            userid = "10155562"
+            token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQ1NzciLCJlbWFpbCI6InByYWRlZXAxMjA3NTkwQGdtYWlsLmNvbSIsInRpbWVzdGFtcCI6MTc1MTcwNzQ4NywidGVuYW50VHlwZSI6InVzZXIiLCJ0ZW5hbnROYW1lIjoiZml0dGl0aV9kYiIsInRlbmFudElkIjoiIiwiZGlzcG9zYWJsZSI6ZmFsc2V9.JlOw_e_qbhz0L3sG0fOET5BrOBENy_utba4X5ASRRD4"
+            userid = "4577"
                 
             headers = {
                 'User-Agent': "okhttp/4.9.1",
